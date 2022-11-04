@@ -1,0 +1,19 @@
+
+ <mat-toolbar color="dark"  class="newColor" >
+
+    <div mat-card-avatar class="example-header-image"></div>
+    
+    <span class="example-space"></span>
+    
+<button mat-flat-buttonbtn  class="btn btn-success btn-sm"  [matMenuTriggerFor]="belowMenu" *ngIf="loggedIn()" matBadge={{notifyLength}} matBadgePosition="before" matBadgeColor="accent" style="margin-right: 7px;"><i class="fa fa-bell"></i></button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button *ngFor="let task of notiificationList" mat-menu-item>hello,you have <b>{{task.taskTitle}}</b> task pending</button>
+
+</mat-menu>
+      
+    <button  mat-flat-button color="basic"  routerLink="./home" style="margin-right: 7px;">Home</button>
+    
+</mat-toolbar>
+
+    
+
